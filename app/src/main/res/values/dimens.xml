@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="signup_signin_padding">5dp</dimen>
+    <dimen name="signup_signin_textsize">20sp</dimen>
+    <dimen name="parent_margin">45dp</dimen>
+    <dimen name="signup_signin_marginbottom">15dp</dimen>
+    <dimen name="signup_signin_margintop">15dp</dimen>
+
+</resources>

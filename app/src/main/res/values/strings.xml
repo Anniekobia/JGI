@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Join Us</string>
+
+    //Signup resources
+    <string name="first_name">Firstname</string>
+    <string name="last_name">Lastname</string>
+    <string name="email">Email</string>
+    <string name="signup_password">Password</string>
+    <string name="retype_password">Retype Password</string>
+    <string name="signup_button">Create Account</string>
+    <string name="login_link">Have an account?Login</string>
+
+    //Signin resources
+    <string name="title_activity_login">Sign in</string>
+    <string name="username">Username</string>
+    <string name="signin_password">Password</string>
+    <string name="login_button">Login</string>
+    <string name="recover_password">Forgot Password?</string>
+
+    //profile settings resources
+    <string name="gym_location">Gym Location</string>
+    <string name="age">Age</string>
+    <string name="gender">Gender</string>
+    <string-array name="gym_locations_array">
+        <item>Thika</item>
+        <item>Karen</item>
+        <item>Utawala</item>
+        <item>Langata</item>
+    </string-array>
+</resources>

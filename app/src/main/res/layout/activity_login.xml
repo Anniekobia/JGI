@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/parent_margin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/username"
+            android:text="@string/username"
+            android:textSize="@dimen/signup_signin_textsize"
+            android:layout_marginTop="@dimen/signup_signin_margintop"
+            android:layout_marginBottom="@dimen/signup_signin_marginbottom"
+            android:padding="@dimen/signup_signin_padding"
+            android:background="@drawable/roundedcorner_textview"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/signinpassword"
+            android:text="@string/signin_password"
+            android:textSize="@dimen/signup_signin_textsize"
+            android:padding="@dimen/signup_signin_padding"
+            android:layout_marginBottom="@dimen/signup_signin_marginbottom"
+            android:background="@drawable/roundedcorner_textview"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/signinbutton"
+            android:text="@string/login_button"
+            android:textSize="@dimen/signup_signin_textsize"
+            android:padding="@dimen/signup_signin_padding"
+            android:layout_marginTop="@dimen/signup_signin_margintop"
+            android:layout_marginBottom="@dimen/signup_signin_marginbottom"
+            android:background="@drawable/roundedcorner_textview"
+            android:backgroundTint="@color/material_grey_400"
+            android:onClick="loginClicked"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recoverpassword"
+            android:text="@string/recover_password"
+            android:textAlignment="center"
+
+            android:onClick="recoverPasswordClicked"/>
+    </LinearLayout>
+
+</LinearLayout>
