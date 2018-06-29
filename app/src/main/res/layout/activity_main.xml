@@ -9,58 +9,54 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Just gym it"
+                android:text="@string/just_gym_it"
                 android:textStyle="bold"
                 android:textAlignment="center"/>
-        </LinearLayout>
-        <TextView
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/firstname"
-            android:text="@string/first_name"
+            android:hint="@string/first_name"
             android:padding="@dimen/signup_signin_padding"
             android:textSize="@dimen/signup_signin_textsize"
             android:layout_marginTop="@dimen/signup_signin_margintop"
             android:layout_marginBottom="@dimen/signup_signin_marginbottom"
             android:background="@drawable/roundedcorner_textview"/>
-        <TextView
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/lastname"
-            android:text="@string/last_name"
+            android:hint="@string/last_name"
             android:padding="@dimen/signup_signin_padding"
             android:textSize="@dimen/signup_signin_textsize"
             android:layout_marginBottom="@dimen/signup_signin_marginbottom"
             android:background="@drawable/roundedcorner_textview"/>
-        <TextView
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/email"
-            android:text="@string/email"
+            android:hint="@string/email"
             android:padding="@dimen/signup_signin_padding"
             android:textSize="@dimen/signup_signin_textsize"
             android:layout_marginBottom="@dimen/signup_signin_marginbottom"
             android:background="@drawable/roundedcorner_textview"/>
-        <TextView
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/signuppassword"
-            android:text="@string/signup_password"
+            android:hint="@string/signup_password"
             android:padding="@dimen/signup_signin_padding"
             android:textSize="@dimen/signup_signin_textsize"
             android:layout_marginBottom="@dimen/signup_signin_marginbottom"
             android:background="@drawable/roundedcorner_textview"/>
-        <TextView
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/retypepassword"
-            android:text="@string/retype_password"
+            android:hint="@string/retype_password"
             android:padding="@dimen/signup_signin_padding"
             android:textSize="@dimen/signup_signin_textsize"
             android:layout_marginBottom="@dimen/signup_signin_marginbottom"

@@ -18,13 +18,21 @@
     <string name="recover_password">Forgot Password?</string>
 
     //profile settings resources
-    <string name="gym_location">Gym Location</string>
-    <string name="age">Age</string>
+    <string name="gym_location">e.g Langata Ngei II</string>
+    <string name="dob">Date Of Birth</string>
     <string name="gender">Gender</string>
+    <string name="just_gym_it">Just gym it</string>
     <string-array name="gym_locations_array">
+        <item></item>
         <item>Thika</item>
         <item>Karen</item>
         <item>Utawala</item>
         <item>Langata</item>
     </string-array>
+    <string name="dobpicker">Date Picker</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
