@@ -30,6 +30,10 @@ dependencies {
     //google play services
     implementation 'com.google.android.gms:play-services:11.4.0'
     //version
-//    implementation 'com.android.support:animated-vector-drawable:27.7.1'
-   implementation 'com.android.support:mediarouter-v7:27.1.1'
+    //implementation 'com.android.support:animated-vector-drawable:27.7.1'
+    implementation 'com.android.support:mediarouter-v7:27.1.1'
+
+    //retrofit,gson dependencies
+    implementation 'com.google.code.gson:gson:2.6.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
 }

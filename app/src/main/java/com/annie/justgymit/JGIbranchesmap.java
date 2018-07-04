@@ -30,7 +30,7 @@ public class JGIbranchesmap extends AppCompatActivity {
         btnmap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this,JGIbranchesmap.class);
+                Intent intent = new Intent(JGIbranchesmap.this,LoginActivity.class);
                 startActivity(intent);
             }
         });
