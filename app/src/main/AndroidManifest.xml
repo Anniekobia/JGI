@@ -42,12 +42,31 @@
             <!-- </intent-filter> -->
         </activity>
         <activity android:name=".JGIbranchesmap" />
-
         <activity android:name=".HomePageActivity" />
-
-        <activity android:name=".HomeActivity"
-            android:label="JGI"
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/title_activity_home"
             android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ProfileActivity"
+            android:label="@string/title_activity_profile"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".BranchesActivity"
+            android:label="@string/title_activity_branches"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".WorkoutsActivity"
+            android:label="@string/title_activity_workouts"
+            android:theme="@style/AppTheme.NoActionBar">>
         </activity>
     </application>
 
