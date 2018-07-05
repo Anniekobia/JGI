@@ -54,7 +54,7 @@ public class LoginActivity extends AppCompatActivity {
                 if(response.isSuccessful()) {
                     Log.i(TAG, "post submitted to API." + response.body().toString());
                     if (response.body().getStatus()==1){
-                        Intent intent = new Intent(LoginActivity.this,ProfileSettingsActivity.class);
+                        Intent intent = new Intent(LoginActivity.this,HomeActivity.class);
                         startActivity(intent);
                     }
                     else if(response.body().getStatus()==2){

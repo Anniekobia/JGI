@@ -97,7 +97,6 @@
             android:text="@string/login_link"
             android:id="@+id/login_link"
             android:textAlignment="center"
-
             android:onClick="loginLinkClicked"/>
     </LinearLayout>
 

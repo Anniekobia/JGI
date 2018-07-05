@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                     //validateRegistration(response.body().toString());
                     Log.i(TAG, "post submitted to API." + response.body().toString());
                     if (response.body().getStatus()==1){
-                        Intent intent = new Intent(MainActivity.this,LoginActivity.class);
+                        Intent intent = new Intent(MainActivity.this,HomeActivity.class);
                         startActivity(intent);
                     }
                     else if(response.body().getStatus()==2){

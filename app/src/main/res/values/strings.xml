@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Join Us</string>
+    <string name="app_name">JGI</string>
 
     //Signup resources
     <string name="first_name">Firstname</string>
@@ -12,7 +12,7 @@
 
     //Signin resources
     <string name="title_activity_login">Sign in</string>
-   <!--<string name="email">Email</string>-->
+    <!--<string name="email">Email</string>-->
     <string name="signin_password">Password</string>
     <string name="login_button">Login</string>
     <string name="recover_password">Forgot Password?</string>
@@ -35,7 +35,14 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
     //googlemaps API
     <string name="google_maps_API_key">AIzaSyBmOQw7ris5VEMQPTT3yCa2S69GqnekUHE</string>
+    <string name="maps">Maps</string>
+
 
 </resources>
