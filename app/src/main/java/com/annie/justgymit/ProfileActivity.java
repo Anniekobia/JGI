@@ -33,15 +33,17 @@ public class ProfileActivity extends AppCompatActivity implements NavigationView
     private static final String TAG = ProfileActivity.class.getSimpleName();
     private APIService mAPIService;
     public String username,firstname,lastname,email;
-    final EditText ageet=findViewById(R.id.ageEt);
-    final EditText genderet=findViewById(R.id.genderEt);
-    final EditText weightet=findViewById(R.id.weightEt);
-    final EditText weightgoalet=findViewById(R.id.weightgoalEt);
-    final EditText homegymet=findViewById(R.id.homegymEt);
+    public EditText ageet;
+    public EditText genderet;
+    public EditText weightet;
+    public EditText weightgoalet;
+    public EditText homegymet;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
+   
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -69,6 +71,11 @@ public class ProfileActivity extends AppCompatActivity implements NavigationView
         //updateuserdetails
         Button submitBtn =findViewById(R.id.profilesettingsbtn);
         mAPIService = APIUtils.getAPIService();
+        ageet=findViewById(R.id.ageEt);
+        genderet=findViewById(R.id.genderEt);
+        weightet=findViewById(R.id.weightEt);
+        weightgoalet=findViewById(R.id.weightgoalEt);
+        homegymet=findViewById(R.id.homegymEt);
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -79,6 +86,9 @@ public class ProfileActivity extends AppCompatActivity implements NavigationView
                 String homegym = homegymet.getText().toString().trim();
             }
         });
+        if (savedInstanceState!=null){
+
+        }
     }
     public void sendPost(final Integer age, final String gender, final Integer weight, final Integer weightgoal,final String homegym) {
         mAPIService.saveUserDetailsPost(age, gender,weight,weightgoal,homegym).enqueue(new Callback<UpdateUserDetailsPost>() {
