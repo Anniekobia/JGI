@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView fieldsemptyResponse;
     private TextView emailusedResponse;
     private APIService mAPIService;
-    private static final String TAG = null ;
+    private static final String TAG = MainActivity.class.getSimpleName() ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
