@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    public void sendPost(String firstname, String lastname,String email,String password) {
+    public void sendPost(final String firstname, final String lastname, final String email, String password) {
         mAPIService.savePost(firstname, lastname,email,password).enqueue(new Callback<RegisterPost>() {
             @Override
             public void onResponse(Call<RegisterPost> call, Response<RegisterPost> response) {
@@ -64,6 +64,8 @@ public class MainActivity extends AppCompatActivity {
                     Log.i(TAG, "post submitted to API." + response.body().toString());
                     if (response.body().getStatus()==1){
                         Intent intent = new Intent(MainActivity.this,HomeActivity.class);
+                        String[] detailsArray=new String[]{firstname,lastname,email};
+                        intent.putExtra("detailsArray",detailsArray);
                         startActivity(intent);
                     }
                     else if(response.body().getStatus()==2){

@@ -11,6 +11,9 @@ public class RegisterPost {
     @SerializedName("message")
     @Expose
     private String message;
+    @SerializedName("username")
+    @Expose
+    private String username;
 
     public Integer getStatus() {
         return status;
@@ -28,11 +31,19 @@ public class RegisterPost {
         this.message = message;
     }
 
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
     @Override
     public String toString() {
         return "RegisterPost{" +
                 "status=" + status +
-                ", message='" + message + '\'' +
+                ", message='" + message +", username="+username+ '\'' +
                 '}';
     }
 }

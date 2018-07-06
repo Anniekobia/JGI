@@ -55,6 +55,11 @@ public class LoginActivity extends AppCompatActivity {
                     Log.i(TAG, "post submitted to API." + response.body().toString());
                     if (response.body().getStatus()==1){
                         Intent intent = new Intent(LoginActivity.this,HomeActivity.class);
+                        String firstname = response.body().getFirstname();
+                        String lastname = response.body().getLastname();
+                        String email=response.body().getEmail();
+                        String[] detailsArray=new String[]{firstname,lastname,email};
+                        intent.putExtra("detailsArray",detailsArray);
                         startActivity(intent);
                     }
                     else if(response.body().getStatus()==2){

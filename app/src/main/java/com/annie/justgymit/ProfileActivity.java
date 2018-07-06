@@ -10,12 +10,18 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class ProfileActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
+    private static final String TAG = ProfileActivity.class.getSimpleName();
+    public String username,firstname,lastname,email;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +38,23 @@ public class ProfileActivity extends AppCompatActivity implements NavigationView
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+//        Intent i = getIntent();
+//        username = i.getStringExtra("username");
+//        Log.d(TAG,username);
+//        Toast.makeText(ProfileActivity.this,username,Toast.LENGTH_LONG).show();
+//        TextView txtProfileName = (TextView) navigationView.getHeaderView(0).findViewById(R.id.nav_header_title);
+//        txtProfileName.setText(username);
+        Intent i = getIntent();
+        String[] arraydetails = i.getStringArrayExtra("detailsArray");
+        username=arraydetails[0]+" "+arraydetails[1];
+        firstname=arraydetails[0];
+        lastname=arraydetails[1];
+        email =arraydetails[2];
+        TextView txtProfileName = (TextView) navigationView.getHeaderView(0).findViewById(R.id.nav_header_title);
+        txtProfileName.setText(username);
+        EditText txtProfileNameSettings = findViewById(R.id.profileusernameEt);
+        txtProfileNameSettings.setText(username);
     }
 
     @Override
@@ -73,16 +96,24 @@ public class ProfileActivity extends AppCompatActivity implements NavigationView
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            Intent intent=new Intent(this,HomeActivity.class);
+            Intent intent = new Intent(ProfileActivity.this,HomeActivity.class);
+            String[] detailsArray=new String[]{firstname,lastname,email};
+            intent.putExtra("detailsArray",detailsArray);
             startActivity(intent);
         } else if (id == R.id.nav_profile) {
-            Intent intent=new Intent(this,ProfileActivity.class);
+            Intent intent = new Intent(ProfileActivity.this,ProfileActivity.class);
+            String[] detailsArray=new String[]{firstname,lastname,email};
+            intent.putExtra("detailsArray",detailsArray);
             startActivity(intent);
         } else if (id == R.id.nav_branches) {
-            Intent intent=new Intent(this,BranchesActivity.class);
+            Intent intent = new Intent(ProfileActivity.this,BranchesActivity.class);
+            String[] detailsArray=new String[]{firstname,lastname,email};
+            intent.putExtra("detailsArray",detailsArray);
             startActivity(intent);
         } else if (id == R.id.nav_workouts) {
-            Intent intent=new Intent(this,WorkoutsActivity.class);
+            Intent intent = new Intent(ProfileActivity.this,WorkoutsActivity.class);
+            String[] detailsArray=new String[]{firstname,lastname,email};
+            intent.putExtra("detailsArray",detailsArray);
             startActivity(intent);
         }
 

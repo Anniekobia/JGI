@@ -8,11 +8,16 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class WorkoutsActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
+    private static final String TAG = HomeActivity.class.getSimpleName();
+    public String username,firstname,lastname,email;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +34,15 @@ public class WorkoutsActivity extends AppCompatActivity implements NavigationVie
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        Intent i = getIntent();
+        String[] arraydetails = i.getStringArrayExtra("detailsArray");
+        username=arraydetails[0]+" "+arraydetails[1];
+        firstname=arraydetails[0];
+        lastname=arraydetails[1];
+        email =arraydetails[2];
+        TextView txtProfileName = (TextView) navigationView.getHeaderView(0).findViewById(R.id.nav_header_title);
+        txtProfileName.setText(username);
     }
 
     @Override
@@ -70,16 +84,24 @@ public class WorkoutsActivity extends AppCompatActivity implements NavigationVie
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            Intent intent=new Intent(this,HomeActivity.class);
+            Intent intent = new Intent(WorkoutsActivity.this,HomeActivity.class);
+            String[] detailsArray=new String[]{firstname,lastname,email};
+            intent.putExtra("detailsArray",detailsArray);
             startActivity(intent);
         } else if (id == R.id.nav_profile) {
-            Intent intent=new Intent(this,ProfileActivity.class);
+            Intent intent = new Intent(WorkoutsActivity.this,ProfileActivity.class);
+            String[] detailsArray=new String[]{firstname,lastname,email};
+            intent.putExtra("detailsArray",detailsArray);
             startActivity(intent);
         } else if (id == R.id.nav_branches) {
-            Intent intent=new Intent(this,BranchesActivity.class);
+            Intent intent = new Intent(WorkoutsActivity.this,BranchesActivity.class);
+            String[] detailsArray=new String[]{firstname,lastname,email};
+            intent.putExtra("detailsArray",detailsArray);
             startActivity(intent);
         } else if (id == R.id.nav_workouts) {
-            Intent intent=new Intent(this,BranchesActivity.class);
+            Intent intent = new Intent(WorkoutsActivity.this,WorkoutsActivity.class);
+            String[] detailsArray=new String[]{firstname,lastname,email};
+            intent.putExtra("detailsArray",detailsArray);
             startActivity(intent);
         }
 
